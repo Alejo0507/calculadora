@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+form{
+    border-radius: 10px;
+    margin-top: 150px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.bin{
+    grid-column: 4/6;
+}
+input{
+    border-radius: 10px;
+    border-color: gray;
+    height: 50px;
+    font-size: 1.5rem;
+}
+input:hover{
+    background-color: rgb(194, 194, 194);
+}
+.text{
+    grid-column: 1/6;
+}
+.c{
+    color: white;
+    background-color: orange;
+}
+.c:hover{
+    background-color: rgb(192, 125, 0);
+}
