@@ -1,3 +1,5 @@
+
+
 body{
     display: flex;
     justify-content: center;
@@ -7,6 +9,7 @@ form{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-top: 100px;
+    padding-bottom: 30px;
     width: 300px;
     background-color: rgb(136, 136, 136);
     display: grid;
@@ -14,7 +17,6 @@ form{
     grid-template-rows: repeat(5,1fr);
     gap: 7px;
     padding-top: 30px;
-    padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
     box-shadow:  10px 10px 10px gray;
@@ -22,7 +24,7 @@ form{
 .bin{
     color: white;
     background-color: rgb(129, 39, 39);
-    grid-column: 4/6;
+    
 }
 .bin:hover{
     background-color: rgb(105, 33, 33)
@@ -37,6 +39,7 @@ input:hover{
     background-color: rgb(194, 194, 194);
 }
 .text{
+    
     background-color: rgb(240, 240, 240);
     grid-column: 1/6;
 }
