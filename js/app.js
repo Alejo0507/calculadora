@@ -23,11 +23,31 @@ const potencia=(numero_uno,numero_dos)=>{
 const porcentaje=(numero_uno,numero_dos)=>{
     return numero_dos*(numero_uno/100)
 }
+const binario=(decimal)=> {
+    if (isNaN(decimal) || decimal < 0 || !Number.isInteger(decimal)) {
+        return "Número no válido";
+    }
+
+    if (decimal === 0) {
+        return "0";
+    }
+
+    let binary = "";
+    while (decimal > 0) {
+        binary = (decimal % 2) + binary;
+        decimal = Math.floor(decimal / 2);
+    }
+
+    return binary;
+}
+const decimal=(numero)=>{
+    return parseInt(numero,2)
+}
 
 
 document.addEventListener("DOMContentLoaded", function() {
     const botones = document.querySelectorAll("input[type='button']");
-    const pantalla = document.querySelector(".text");
+    pantalla = document.querySelector(".text");
 
     botones.forEach(boton => {
         boton.addEventListener("click", () => {
@@ -87,10 +107,18 @@ document.addEventListener("DOMContentLoaded", function() {
                     let numero_dos = parseInt(numeros[1]); 
                     const resultado = porcentaje(numero_uno, numero_dos); 
                     pantalla.value = resultado; 
+                }else if(contenido.includes("bin")){
+                    const numero = parseFloat(contenido.replace("bin", ""));
+                    const resultado = (binario(numero));
+                    pantalla.value = resultado;
+                }else if (contenido.includes("dec")){
+                    const numero = pantalla.value
+                    const resultado=decimal(numero)
+                    pantalla.value=resultado
                 }
                 
             } else if (valorBoton === "c") {
-                pantalla.value = "0";
+                pantalla.value = "";
             } else {
                 pantalla.value += valorBoton;
             }
