@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 
             } else if (valorBoton === "c") {
-                pantalla.value = "";
+                pantalla.value = "0";
             } else {
                 pantalla.value += valorBoton;
             }
